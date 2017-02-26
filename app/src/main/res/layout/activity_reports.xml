@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_reports"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.bams.android.examenspeechtotext.ReportsActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeFrom"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/lblFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FROM:"
+            android:textColor="#000"
+            android:textSize="10dp" />
+
+
+        <Button
+            android:id="@+id/btnChooseFromDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblFrom"
+            android:onClick="showTimePickerDialog"
+            android:text="CHOOSE DATE" />
+
+        <TextView
+            android:id="@+id/txtReportsFromDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnChooseFromDate"
+            android:padding="5dp"
+            android:text="22/02/2017"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/txtReportsFromTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtReportsFromDate"
+            android:layout_alignBottom="@+id/txtReportsFromDate"
+            android:layout_below="@id/btnChooseFromDate"
+            android:layout_toEndOf="@+id/txtReportsFromDate"
+            android:padding="5dp"
+            android:text="22:02:17"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btnChooseFromTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btnChooseFromDate"
+            android:layout_alignBottom="@+id/btnChooseFromDate"
+            android:layout_toEndOf="@+id/btnChooseFromDate"
+            android:onClick="showTimePickerDialog"
+            android:text="CHOOSE TIME" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeTo"
+        android:layout_below="@id/relativeFrom"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/lblTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TO:"
+            android:textColor="#000"
+            android:textSize="10dp" />
+
+
+        <Button
+            android:id="@+id/btnChooseToDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblTo"
+            android:onClick="showTimePickerDialog"
+            android:text="CHOOSE DATE" />
+
+        <TextView
+            android:id="@+id/txtReportsToDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnChooseToDate"
+            android:padding="5dp"
+            android:text="22/02/2017"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/txtReportsToTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtReportsToDate"
+            android:layout_alignBottom="@+id/txtReportsToDate"
+            android:layout_below="@id/btnChooseToDate"
+            android:layout_toEndOf="@+id/txtReportsToDate"
+            android:padding="5dp"
+            android:text="22:02:17"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btnChooseToTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btnChooseToDate"
+            android:layout_alignBottom="@+id/btnChooseToDate"
+            android:layout_toEndOf="@+id/btnChooseToDate"
+            android:onClick="showTimePickerDialog"
+            android:text="CHOOSE TIME" />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeTo"
+        android:onClick="showTimePickerDialog"
+        android:text="SEARCH" />
+
+
+</RelativeLayout>
